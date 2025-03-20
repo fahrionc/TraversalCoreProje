@@ -1,0 +1,29 @@
+﻿@model List<ApiCarsViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Api ile Araç Listesi</h1>
+<br>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Tipi</th>
+        <th>Model Yılı</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <th>@item.id</th>
+            <td>@item.make</td>
+            <td>@item.model</td>
+            <td>@item.type</td>
+            <td>@item.year</td>
+        </tr>
+    }
+</table>
+
