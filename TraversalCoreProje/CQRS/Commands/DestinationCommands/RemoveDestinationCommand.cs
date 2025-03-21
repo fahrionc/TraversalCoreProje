@@ -1,6 +1,8 @@
-﻿namespace TraversalCoreProje.CQRS.Commands.DestinationCommands
+﻿using MediatR;
+
+namespace TraversalCoreProje.CQRS.Commands.DestinationCommands
 {
-    public class RemoveDestinationCommand
+    public class RemoveDestinationCommand : IRequest
     {
         public RemoveDestinationCommand(int id)
         {
